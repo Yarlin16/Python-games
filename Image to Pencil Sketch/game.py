@@ -1,6 +1,6 @@
 import cv2
 
-image = cv2.imread("trp.jpg")
+image = cv2.imread("Image to Pencil Sketch/trp.jpg")
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 inverted_image = 255 - gray_image
 blurred = cv2.GaussianBlur(inverted_image, (21, 21), 0)
@@ -15,4 +15,4 @@ cv2.imshow("Original vs Pencil Sketch", combined)
 cv2.waitKey(0)
 
 # Save the pencil sketch image
-cv2.imwrite("pencil_sketch_output.jpg", pencil_sketch)
+cv2.imwrite("Image to Pencil Sketch/pencil_sketch_output.jpg", pencil_sketch)
